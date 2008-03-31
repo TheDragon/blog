@@ -1,0 +1,9 @@
+<% if @posts.blank? %>
+	<p>I haven't posted anything yet.</p>
+<% else %>
+	<% @posts.each do |post| %>
+		<h1><%= link_to post.title, {:action => 'read', :id => post.id} -%></h1>
+		<p class="meta"><%= post.created_at %></p>
+		<p><ul><%= simple_format h(post.body) %></ul></p>
+	<% end %>
+<% end %>

@@ -1,0 +1,47 @@
+<html>
+	
+	<head>
+	<title> <%= @page_title %> </title>
+	<%= stylesheet_link_tag "default" %>
+	</head>
+	<body>
+	<%= render :partial => 'home/message' %>
+	<div class="container">
+		<div class="header">dragon.blog</div>
+		<div class="main_right">
+			<div class="padded">
+				<h1>blog.about</h1>
+                <p>This is a Rails project site. My first blog written in rails. Enjoy.
+                For some lame reason, this template requires that I have more text in this area t
+                so I'll just tell you a little bit about myself. I'm 25 years old, and I've been
+                to RoR, and this is my "hello, world!" so to speak..</p><p>
+					
+				<% if is_admin? %>
+					<%= link_to "Admin page", :controller => "admin" %>
+				<% end %>
+					
+				</p>
+			</div>
+		</div>
+		<div class="subnav">
+			<h1>Go there!</h1>
+			<ul>
+				<li><% if is_admin? %> <%= link_to "Admin", :controller => "admin" %> <% end %>
+				<li><%= link_to "Main", :controller => "home" %></li>
+				<li><%= link_to "Cam", :controller => "webcam" %></li>
+			</ul>
+		</div>
+		<div class="main">
+			<div class="padded">
+				<%= yield %>
+			</div>
+		</div>
+		<div class="clearer"><span></span></div>
+		<div class="footer">
+			<span class="left">&copy; 2008 TheDragon</span>
+			<span class="right">Template design by <a href="http://templates.arcsin.se">arcsin</a>
+			<div class="clearer"><span></span></div>
+		</div>
+	</div>
+	</body>
+</html>

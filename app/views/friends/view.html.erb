@@ -1,0 +1,17 @@
+<html>
+	<body>
+		<h1>Friends#view</h1>
+		<p>This page will display one friend</p>
+		<p>
+		<%= @person.name %><br />
+		<%= @person.street1 %><br />
+		<%= @person.street2 %><br />
+		<%= @person.city %><br />
+		<%= @person.state %><br />
+		<%= @person.zip %><br/>
+		<% for phone in @person.phones %>
+		<%= phone.phone %><br />
+		<% end %>
+		</p>
+	</body>
+</html>

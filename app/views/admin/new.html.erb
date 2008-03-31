@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title><%= @page_title %></title>
+	</head>
+	<body>
+		<%= error_messages_for :post %>
+		<% form_for :post, @post, :url => {:action => "create"} do |p| %>
+			<p><label for="post_title">Title</label><br />
+			<%= p.text_field :title %></p>
+		
+			<p><label for="post_text">Body</label><br />
+			<%= p.text_area :body %></p>
+			<%= submit_tag "Post" %>
+		<% end %>
+
+		<%= link_to 'Back', {:action => 'index'} %>
+	</body>
+</html>

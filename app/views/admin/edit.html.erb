@@ -1,0 +1,12 @@
+<html>
+	<body>
+		<b>Admin Edit Page</b>
+		<% if @post %>
+			<% form_tag :action => 'update', :id => @post.id do %>
+				<%= text_field :post, :title %><br />
+				<%= text_area :post, :body %><br />
+				<%= submit_tag "Edit!" %>
+			<% end %>
+		<% end %>
+	</body>
+</html>
