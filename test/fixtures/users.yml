@@ -1,12 +1,14 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-# one:
-#   column: value
-#
-# two:
-#   column: value
+# User fixtures
 thedragon:
   username: TheDragon
   admin: true
   email: thedragon@mediocreshit.com
-  pass_hash: qpalzm1290
+  salt: 13f2c8deaf2e6a65c1a0d9da2fdc8c7b2039d850
+  pass_hash: 06aed6b9e5c570a9dc94afad9fc26011b19b6a0d # b0ngb0ng
+
+oshuma:
+  username: Oshuma
+  admin: false # :(
+  email: oshuma@mediocreshit.com
+  salt: 13f2c8deaf2e6a65c1a0d9da2fdc8c7b2039d850
+  pass_hash: 06aed6b9e5c570a9dc94afad9fc26011b19b6a0d # b0ngb0ng

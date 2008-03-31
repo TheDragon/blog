@@ -1,7 +1,19 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# Comment fixtures
+talk:
+  post: first
+  body: "I'm talking about something here."
+  author: 'Oshuma'
+  email: 'oshuma@mediocreshit.com'
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+rant:
+  post: second
+  body: "I'm ranting about something here."
+  author: 'Some Dude'
+  email: 'some@dude.edu'
+backfire:
+  post: second
+  body: "I'm ranting against the rant above."
+  author: 'Counter-point Guy'
+  email: 'counter@point.co.uk'
+
+# Third Post has no comments yet.

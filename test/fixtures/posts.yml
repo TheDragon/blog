@@ -1,7 +1,18 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# Post fixtures
+first:
+  user: thedragon
+  title: 'First Post!'
+  body: 'This is the first post.'
+  created_at: <%= 5.days.ago.to_s :db %>
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+second:
+  user: thedragon
+  title: 'Second Post'
+  body: 'More postings and shits.'
+  created_at: <%= 3.days.ago.to_s :db %>
+
+third:
+  user: thedragon
+  title: 'Third Post'
+  body: 'More and more and more and more and more.'
+  created_at: <%= 1.day.ago.to_s :db %>

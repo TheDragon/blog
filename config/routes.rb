@@ -1,5 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :posts
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -24,6 +23,10 @@ ActionController::Routing::Routes.draw do |map|
   #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
   #     admin.resources :products
   #   end
+
+  # This maps RESTful routes to specific actions.
+  # Do 'rake routes' to view what gets setup for you.
+  map.resources :posts
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   map.root  :controller => 'home', :action => 'index'

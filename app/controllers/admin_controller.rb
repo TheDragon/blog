@@ -1,9 +1,15 @@
 class AdminController < ApplicationController
   before_filter :ensure_admin, :except => [:login, :index]
 
-  layout 'default'
+  # If you want to use a global layout for all controllers, just specify this
+  # in ApplicationController.
+  # layout 'default'
+
   def index
-    if !session[:id]
+    # There's usually no need to use the ! operator in if/unless tests, unless
+    # you *really* specifically need to.
+    # if !session[:id]
+    unless session[:id]  # Does the same as above if statement.
       render :action => 'login'
     else
       @page_title = "Blog Administration"
@@ -13,6 +19,9 @@ class AdminController < ApplicationController
   
   def login
     return unless request.post?
+    # Ideally, you would sanitize the username and password, since it's coming
+    # from the outside world, but since User.authenticate passes the username to
+    # User.find_by_username, it's basically the same as specifying conditions.
     @user = User.authenticate(params[:user][:username],params[:user][:password])
     if @user
       session[:id] = @user.id
@@ -24,7 +33,9 @@ class AdminController < ApplicationController
   end
   
   def new
-    unless !session[:id]
+    # This if statement does the same.  See notes above.
+    # unless !session[:id]
+    if session[:id]
       @post = Post.new
     else
       render :action => 'login'

@@ -12,28 +12,28 @@
 ActiveRecord::Schema.define(:version => 3) do
 
   create_table "comments", :force => true do |t|
-    t.string   "post_id",    :default => "NULL"
-    t.text     "body",       :default => "NULL"
-    t.string   "author",     :default => "NULL"
-    t.string   "email",      :default => "NULL"
+    t.string   "post_id"
+    t.text     "body"
+    t.string   "author"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "posts", :force => true do |t|
-    t.string   "title",      :default => "NULL"
-    t.text     "body",       :default => "NULL"
-    t.string   "permalink",  :default => "NULL"
+    t.string   "title"
+    t.text     "body"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username",   :default => "NULL"
-    t.string   "pass_hash",  :default => "NULL"
-    t.boolean  "admin",      :default => false
-    t.string   "email",      :default => "NULL"
-    t.string   "salt",       :default => "NULL"
+    t.string   "username"
+    t.string   "pass_hash"
+    t.boolean  "admin"
+    t.string   "email"
+    t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
