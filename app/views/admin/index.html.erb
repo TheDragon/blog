@@ -1,8 +1,3 @@
-<html>
-	<head>
-		<title><%= @page_title %></title>
-	</head>
-	<body>
 		<%= link_to "Create a new post", {:action => 'new'} %><br />
 		<% @posts.each do |post| %>
 			<b>Title:</b> <%= post.title %><br />
@@ -10,5 +5,3 @@
 			<%= link_to "Edit", {:action => 'edit', :id => post.id} %> ||
 			<%= link_to "Delete", {:action => 'delete', :id => post.id} %><br /><br />
 		<% end %>
-	</body>
-</html>

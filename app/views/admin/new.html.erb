@@ -1,8 +1,3 @@
-<html>
-	<head>
-		<title><%= @page_title %></title>
-	</head>
-	<body>
 		<%= error_messages_for :post %>
 		<% form_for :post, @post, :url => {:action => "create"} do |p| %>
 			<p><label for="post_title">Title</label><br />
@@ -14,5 +9,3 @@
 		<% end %>
 
 		<%= link_to 'Back', {:action => 'index'} %>
-	</body>
-</html>

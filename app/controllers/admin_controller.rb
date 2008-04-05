@@ -23,6 +23,14 @@ class AdminController < ApplicationController
     end
   end
   
+  def upload
+
+  end
+
+  def save_file
+
+  end
+
   def new
     unless !session[:id]
       @post = Post.new
@@ -30,7 +38,7 @@ class AdminController < ApplicationController
       render :action => 'login'
     end
   end
-  
+  # TODO: Find out why the fuck this fails with an invalid auth token on the first submission attempt, but succeeds after a refresh.  
   def create
     @post = Post.new(params[:post])
     if @post.save
