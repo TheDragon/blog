@@ -1,0 +1,10 @@
+<% form_for :comment, :url => {:action => 'post_comment'} do |c| %>
+	<p><label for="email">Email Address(required):</label>
+	<%= c.text_field :email %><br /></p>
+	<p><label for="author">Name:</label>
+	<%= c.text_field :author %><br /></p>
+	<p><label for="body">Comment:</label><br />
+	<%= c.text_area :body %>
+	</p>
+	<%= submit_tag "Add Comment" %>
+<% end %>	

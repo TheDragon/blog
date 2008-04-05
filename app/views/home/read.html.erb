@@ -1,8 +1,5 @@
-<html>
-	<body>
 		<h1><%= @posts.title %></h1>
 		<ul><%= simple_format @posts.body %></ul>
 		<br />
 		<%= link_to 'Back to list', { :action => 'index' } %>
-	</body>
-</html>
+		<%= render :partial => 'home/add_comment', :locals => { :post => @posts } %>
